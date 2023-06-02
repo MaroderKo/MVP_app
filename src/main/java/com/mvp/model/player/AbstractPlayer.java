@@ -1,8 +1,10 @@
 package com.mvp.model.player;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter
+@EqualsAndHashCode
 public abstract class AbstractPlayer {
     protected final static int WINNER_TEAM_POINT_VALUE = 10;
 

@@ -13,7 +13,9 @@ import java.util.stream.Collectors;
 public class GameCountScoreServiceImpl implements GameCountService {
     @Override
     public List<PlayerResult> countPlayersScore(Game game) {
-        return game.getPlayers().stream().map(player -> new PlayerResult(player.getNickname(), player.getIndividualScore(getWinner(game)))).collect(Collectors.toUnmodifiableList());
+        return game.getPlayers()
+                .stream()
+                .map(player -> new PlayerResult(player.getNickname(), player.getIndividualScore(getWinner(game)))).collect(Collectors.toUnmodifiableList());
     }
 
     private String getWinner(Game game) {
